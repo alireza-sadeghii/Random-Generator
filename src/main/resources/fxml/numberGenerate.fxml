@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" onMouseClicked="#spinnerEdit" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.number.GenerateNumber">
+   <children>
+      <Label layoutX="170.0" layoutY="34.0" prefHeight="53.0" prefWidth="260.0" text="Number generator" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="33.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="64.0" fitWidth="60.0" layoutY="-3.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/home.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.05" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Spinner fx:id="min" editable="true" layoutX="269.0" layoutY="122.0" onMouseEntered="#spinnerEdit" prefHeight="25.0" prefWidth="126.0">
+         <valueFactory>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory initialValue="0" max="2147483647" min="-2147483648" />
+         </valueFactory>
+      </Spinner>
+      <Label alignment="CENTER" layoutX="149.0" layoutY="115.0" prefHeight="38.0" prefWidth="151.0" text="Min :" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font></Label>
+      <Spinner fx:id="max" editable="true" layoutX="269.0" layoutY="172.0" onMouseEntered="#spinnerEdit" prefHeight="25.0" prefWidth="126.0">
+         <valueFactory>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory initialValue="0" max="2147483647" min="-2147483648" />
+         </valueFactory>
+      </Spinner>
+      <Label alignment="CENTER" layoutX="149.0" layoutY="165.0" prefHeight="38.0" prefWidth="151.0" text="Max :" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font></Label>
+      <Button layoutX="237.0" layoutY="303.0" mnemonicParsing="false" onAction="#generate" prefHeight="33.0" prefWidth="126.0" text="Generate" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.21" height="29.9" radius="13.7075" width="26.93">
+               <color>
+                  <Color red="0.0871710553765297" green="0.5143092274665833" blue="0.6973684430122375" />
+               </color></InnerShadow>
+         </effect>
+      </Button>
+      <Text fx:id="result" layoutX="205.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="190.13671875">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.7055555555555556" centerY="0.15714285714285714" cycleMethod="REFLECT" focusAngle="-146.98" focusDistance="0.06976744186046502" radius="0.5348837209302325">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.2540999948978424" green="0.6152300238609314" blue="0.7699999809265137" opacity="0.8478260636329651" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <RadioButton fx:id="intKey" layoutX="217.0" layoutY="210.0" mnemonicParsing="false" onMouseClicked="#intButtonCheck" onMouseEntered="#intButtonCheck" onMousePressed="#intButtonCheck" prefHeight="31.0" prefWidth="104.0" text="Integer" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="floatKey" layoutX="332.0" layoutY="210.0" mnemonicParsing="false" onMouseClicked="#floatButtonCheck" onMouseEntered="#floatButtonCheck" onMousePressed="#floatButtonCheck" prefHeight="31.0" prefWidth="104.0" text="Float" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

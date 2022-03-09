@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.sequence.SequenceGenerate">
+    <children>
+        <Label layoutX="170.0" layoutY="22.0" prefHeight="50.0" prefWidth="284.0" text="Sequence Generator">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="33.0" />
+            </font>
+        </Label>
+      <Label layoutX="116.0" layoutY="94.0" prefHeight="50.0" prefWidth="48.0" text="From :">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="start" layoutX="164.0" layoutY="107.0" prefHeight="25.0" prefWidth="60.0" promptText="Start" />
+        <Label layoutX="381.0" layoutY="111.0" prefHeight="16.0" prefWidth="40.0" text="Step :">
+            <font>
+                <Font name="Times New Roman Bold" size="14.0" />
+            </font></Label>
+        <TextField fx:id="end" layoutX="289.0" layoutY="107.0" prefHeight="25.0" prefWidth="60.0" promptText="End" />
+      <Label layoutX="258.0" layoutY="111.0" prefHeight="16.0" prefWidth="31.0" text="To :">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="seqStep" layoutX="421.0" layoutY="108.0" prefHeight="25.0" prefWidth="60.0" promptText="Step" />
+        <ImageView fitHeight="64.0" fitWidth="60.0" layoutY="-3.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icon/home.jpg" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+                <ColorAdjust brightness="-0.05" />
+            </effect></ImageView>
+      <Button layoutX="248.0" layoutY="155.0" mnemonicParsing="false" onAction="#generate" prefHeight="25.0" prefWidth="104.0" text="Generate">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.14" height="29.9" radius="14.45" width="29.9">
+               <color>
+                  <Color red="0.8156862854957581" green="0.7803921699523926" blue="0.11764705926179886" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <ListView fx:id="list" editable="true" layoutX="161.0" layoutY="201.0" prefHeight="174.0" prefWidth="278.0">
+         <effect>
+            <DropShadow />
+         </effect></ListView>
+      <Label fx:id="alert" alignment="CENTER" layoutX="105.0" layoutY="278.0" prefHeight="19.0" prefWidth="392.0" text="It is not possible to process this volume of the ir.ac.kntu.sequence" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5095238095238095" endY="0.41428571428571426" startX="0.5095238095238095" startY="0.5380952380952382">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8157894611358643" green="0.0830896720290184" blue="0.0830896720290184" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.46052631735801697" green="0.044773392379283905" blue="0.044773392379283905" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.custom.GenerateCustom">
+    <children>
+        <Label layoutX="170.0" layoutY="34.0" prefHeight="50.0" prefWidth="284.0" text="Custom Generator">
+        <font>
+            <Font name="Times New Roman Bold Italic" size="33.0" />
+        </font>
+        </Label>
+        <ImageView fitHeight="64.0" fitWidth="60.0" layoutY="-3.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icon/home.jpg" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <effect>
+                <ColorAdjust brightness="-0.05" />
+            </effect></ImageView>
+      <ImageView fitHeight="39.0" fitWidth="32.0" layoutX="10.0" layoutY="101.0" onMouseClicked="#visibleSubmitSheet" onMouseEntered="#addRequest" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/pen.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="6.0" layoutY="141.0" onMouseClicked="#visibleSubmitSheet" onMouseEntered="#removeRequest" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/eraser.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="10.0" layoutY="275.0" onMouseClicked="#removeAll" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/delete.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="32.0" layoutX="14.0" layoutY="232.0" onMouseClicked="#save" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/save.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ListView fx:id="list" layoutX="366.0" layoutY="91.0" prefHeight="289.0" prefWidth="194.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </ListView>
+      <TextField fx:id="objText" layoutX="151.0" layoutY="129.0" onAction="#submit" visible="false">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow height="32.86" radius="16.6725" spread="0.2" width="35.83">
+               <color>
+                  <Color red="0.5254902243614197" green="0.33725491166114807" blue="0.027450980618596077" />
+               </color></DropShadow>
+         </effect>
+      </TextField>
+      <Button fx:id="submitKey" layoutX="195.0" layoutY="161.0" mnemonicParsing="false" onAction="#submit" text="Submit" visible="false">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow height="32.86" radius="16.6725" spread="0.2" width="35.83">
+               <color>
+                  <Color red="0.5254902243614197" green="0.33725491166114807" blue="0.027450980618596077" />
+               </color></DropShadow>
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="170.0" layoutY="313.0" mnemonicParsing="false" onAction="#generate" prefHeight="39.0" prefWidth="111.0" text="Generate">
+         <font>
+            <Font name="Times New Roman" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow height="35.83" radius="16.6725" spread="0.2" width="32.86">
+               <color>
+                  <Color red="0.5254902243614197" green="0.33725491166114807" blue="0.027450980618596077" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Text fx:id="result" layoutX="151.0" layoutY="288.0" stroke="#865607" strokeType="OUTSIDE" strokeWidth="0.5" textAlignment="CENTER" wrappingWidth="149.0">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="12.0" layoutY="187.0" onMouseClicked="#load" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/load.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </ImageView>
+    </children>
+</AnchorPane>

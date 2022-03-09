@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.bool.GenerateBoolean">
+   <children>
+      <Label layoutX="170.0" layoutY="34.0" prefHeight="53.0" prefWidth="260.0" text="Boolean generator" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="33.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="trueImg" fitHeight="144.0" fitWidth="144.0" layoutX="88.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../boolean/true.jpg" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.729411780834198" green="0.729411780834198" blue="0.729411780834198" opacity="0.9300000071525574" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="falseImg" fitHeight="144.0" fitWidth="120.0" layoutX="387.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../boolean/false.jpg" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.729411780834198" green="0.729411780834198" blue="0.729411780834198" opacity="0.9300000071525574" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <Text fx:id="result" layoutX="222.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="155.13671875">
+         <font>
+            <Font name="Times New Roman Italic" size="30.0" />
+         </font>
+         <effect>
+            <Reflection bottomOpacity="0.23" fraction="0.74" topOpacity="0.23" />
+         </effect></Text>
+      <Button layoutX="237.0" layoutY="305.0" mnemonicParsing="false" onAction="#generate" prefHeight="33.0" prefWidth="126.0" text="Generate" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.21" height="29.9" radius="13.7075" width="26.93">
+               <color>
+                  <Color red="0.658823549747467" green="0.05098039284348488" blue="0.05098039284348488" />
+               </color></InnerShadow>
+         </effect>
+      </Button>
+      <ImageView fitHeight="64.0" fitWidth="60.0" layoutY="-3.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/home.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.05" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

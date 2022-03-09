@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.ac.kntu.Main">
+   <children>
+      <Button fx:id="passKey" contentDisplay="TOP" layoutX="102.0" layoutY="158.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Password" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow height="31.75" radius="15.6525" spread="0.2" width="32.86">
+               <color>
+                  <Color red="0.08627451211214066" green="0.5254902243614197" blue="0.1725490242242813" />
+               </color></DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="TOP" layoutX="160.0" layoutY="29.0" prefHeight="61.0" prefWidth="280.0" text="Random Generator">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="33.0" />
+         </font>
+      </Label>
+      <Button fx:id="boolKey" layoutX="260.0" layoutY="158.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Boolean" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow height="32.59" radius="15.8625" spread="0.2" width="32.86">
+               <color>
+                  <Color red="0.658823549747467" green="0.05098039284348488" blue="0.05098039284348488" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor></Button>
+      <Button fx:id="numKey" layoutX="406.0" layoutY="158.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Number" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow height="32.73" radius="15.8975" spread="0.2" width="32.86">
+               <color>
+                  <Color red="0.0871710553765297" green="0.5143092274665833" blue="0.6973684430122375" />
+               </color></DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="seqKey" layoutX="102.0" layoutY="228.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Sequence" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow height="32.83" radius="15.9225" spread="0.2" width="32.86">
+               <color>
+                  <Color red="0.8156862854957581" green="0.7803921699523926" blue="0.11764705926179886" />
+               </color></DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="customKey" layoutX="406.0" layoutY="228.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Custom">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow height="32.86" radius="15.93" spread="0.2" width="32.86">
+               <color>
+                  <Color red="0.5254902243614197" green="0.33725491166114807" blue="0.027450980618596077" />
+               </color></DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor></Button>
+      <Button fx:id="about" layoutX="260.0" layoutY="228.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="About me">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow height="32.86" radius="15.93" spread="0.2" width="32.86">
+               <color>
+                  <Color blue="1.0" />
+               </color></DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>
